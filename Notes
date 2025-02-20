@@ -1,1 +1,18 @@
+Kalıcılık Sağlama (Persistence):
 
+    -sys.executable ile çalıştırılan programın kendisini "sysupgrades.exe" olarak AppData dizinine kopyalıyor.
+    -Windows Registry'ye bir kayıt ekleyerek bilgisayar her açıldığında bu dosyanın otomatik çalışmasını sağlıyor.
+
+Dosya Açma:
+
+    -sys._MEIPASS kullanarak metallica.pdf adlı bir dosyayı açıyor. (Bu genellikle PyInstaller ile derlenmiş programlarda geçici dizine erişmek için kullanılır.)
+
+Ekrana Yazı Yazma (Loop):
+
+    -100 kez "i hacked you" yazdırıyor ve her seferinde 0.5 saniye bekliyor.
+
+Komut Çalıştırma (Yorum Satırı):
+
+    subprocess.check_output("commmand", shell=True, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+        -Yorum satırı olmasına rağmen, komut çalıştırmak için kullanılmış.
+        -stderr ve stdin parametreleri ile hata mesajlarını ve girişleri gizleyerek sessiz çalışmasını sağlıyor.
